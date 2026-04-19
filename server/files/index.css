@@ -1,41 +1,87 @@
 @import url(base.css);
 
-h1 {
-  font-size: 200%;
-  margin: 8px 0px;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #fdf5e6; /* antiquewhite */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px; 
+  }
+
+h1 { 
+  text-align: center; 
+  color: #2c3e50;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-left: 8px solid #ff4b5c; 
+  overflow: hidden; /* Verhindert Überlappen von Floats */
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  clear: both; 
+}
+
+button {
+    display: inline-block;
+    width: 50%;
+    padding: 8px 25px;
+    margin-top: 15px;
+    background-color: #ff4b5c; 
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 0;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d13d4b; 
 }
 
 img {
-  border-radius: 12px;
+  max-width: 150px;
+  border-radius: 8px;
+  float: left;
+  margin-right: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-article {
-  background-color: lightgray;
-  border-radius: 16px;
-  padding: 16px;
-  margin: 2vw;
+ul { 
+  list-style: none; 
+  padding: 0; 
 }
 
-span {
-  margin-right: 4px;
+li { 
+  margin-bottom: 5px; 
 }
 
-.genre {
-  padding: 4px 8px;
-  border: solid black 1px;
-  border-radius: 6px;
-  background-color: darkgray;
-  font-weight: bold;
+.genre-tag {
+  background: #ff4b5c;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  margin-right: 8px;
+  display: inline-block;
 }
 
-input {
-  width: 100%;
-}
 
-select {
-  width: 100%;
-}
+.movie-card::after {
+  content: ""; 
+  display: table;
+  clear: both;
+  }
 
-textarea {
-  width: 100%;
-}
